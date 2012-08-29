@@ -1,0 +1,1739 @@
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (31.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (62.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20120807081235)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120807081235')
+  [1m[36m (78.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-07 16:18:18 +0800
+Served asset /rails.png - 200 OK (62ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 16:18:40 +0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (62.5ms)
+Compiled products.css  (31ms)  (pid 5216)
+Compiled scaffolds.css  (0ms)  (pid 5216)
+Compiled application.css  (234ms)  (pid 5216)
+Compiled jquery.js  (0ms)  (pid 5216)
+Compiled jquery_ujs.js  (15ms)  (pid 5216)
+Compiled products.js  (953ms)  (pid 5216)
+Compiled application.js  (1296ms)  (pid 5216)
+Completed 200 OK in 2031ms (Views: 2031.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 16:18:42 +0800
+Served asset /application.css - 200 OK (31ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 16:18:42 +0800
+Served asset /products.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 16:18:42 +0800
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 16:18:42 +0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 16:18:42 +0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 16:18:42 +0800
+Served asset /products.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 16:18:42 +0800
+Served asset /application.js - 200 OK (15ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2012-08-07 16:19:05 +0800
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (46.9ms)
+  Rendered products/new.html.erb within layouts/application (93.8ms)
+Completed 200 OK in 125ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2012-08-07 16:20:09 +0800
+Processing by ProductsController#new as */*
+  Rendered products/_form.html.erb (0.0ms)
+  Rendered products/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 16:20:09 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 16:20:09 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 16:20:09 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 16:20:09 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 16:20:09 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 16:20:09 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 16:20:09 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2012-08-07 16:20:59 +0800
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yZKxu15Cuns2TG0J5n0zjLn9ni564GqwiqMKyw5yd0=", "product"=>{"title"=>"Web Design for Deveopers", "description"=>"WDFD Description...", "image_url"=>"/images/wd4d.jpg", "price"=>"42.95"}, "commit"=>"Create Product"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (125.0ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 07 Aug 2012 08:20:59 UTC +00:00], ["description", "WDFD Description..."], ["image_url", "/images/wd4d.jpg"], ["price", #<BigDecimal:257a828,'0.4295E2',18(18)>], ["title", "Web Design for Deveopers"], ["updated_at", Tue, 07 Aug 2012 08:20:59 UTC +00:00]]
+  [1m[35m (93.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 219ms (ActiveRecord: 218.8ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2012-08-07 16:20:59 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 16:21:14 +0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (62.5ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (93.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (125.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (109.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2012-08-07 16:41:41 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered products/_form.html.erb (31.2ms)
+  Rendered products/edit.html.erb within layouts/application (125.0ms)
+Completed 200 OK in 234ms (Views: 234.4ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/products/1" for 127.0.0.1 at 2012-08-07 16:42:36 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yZKxu15Cuns2TG0J5n0zjLn9ni564GqwiqMKyw5yd0=", "product"=>{"title"=>"Programming Ruby 1.9", "description"=>"<p>\r\n        Ruby is the fastest growing and most exciting dynamic language\r\n        out there. If you need to get working programs delivered fast,\r\n        you should add Ruby to your toolbox.\r\n      </p>", "image_url"=>"/images/ruby.jpg", "price"=>"49.95"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  UPDATE "products" SET "title" = 'Programming Ruby 1.9', "description" = '<p>
+ Ruby is the fastest growing and most exciting dynamic language
+ out there. If you need to get working programs delivered fast,
+ you should add Ruby to your toolbox.
+ </p>', "image_url" = '/images/ruby.jpg', "price" = 49.95, "updated_at" = '2012-08-07 08:42:36.562500' WHERE "products"."id" = 1
+  [1m[36m (93.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 141ms (ActiveRecord: 93.8ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2012-08-07 16:42:36 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 16:42:38 +0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 16:46:04 +0800
+Processing by ProductsController#index as */*
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 62ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 16:46:05 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 16:46:05 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 16:46:05 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 16:46:05 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 16:46:05 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 16:46:05 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 16:46:05 +0800
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2012-08-07 16:46:12 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered products/_form.html.erb (0.0ms)
+  Rendered products/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/products/1" for 127.0.0.1 at 2012-08-07 16:46:17 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yZKxu15Cuns2TG0J5n0zjLn9ni564GqwiqMKyw5yd0=", "product"=>{"title"=>"Programming Ruby 1.9", "description"=>"<p>\r\n        Ruby is the fastest growing and most exciting dynamic language\r\n        out there. If you need to get working programs delivered fast,\r\n        you should add Ruby to your toolbox.\r\n      </p>", "image_url"=>"ruby.jpg", "price"=>"49.95"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  UPDATE "products" SET "image_url" = 'ruby.jpg', "updated_at" = '2012-08-07 08:46:17.687500' WHERE "products"."id" = 1
+  [1m[36m (156.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 172ms (ActiveRecord: 156.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2012-08-07 16:46:17 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 16:46:20 +0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (93.8ms)[0m  DELETE FROM "products"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (31.2ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Aug 2012 08:47:05 UTC +00:00], ["description", "<p>\n        Ruby is the fastest growing and most exciting dynamic language\n        out there. If you need to get working programs delivered fast,\n        you should add Ruby to your toolbox.\n      </p>"], ["image_url", "ruby.jpg"], ["price", #<BigDecimal:24de780,'0.4995E2',18(45)>], ["title", "Programming Ruby 1.9"], ["updated_at", Tue, 07 Aug 2012 08:47:05 UTC +00:00]]
+  [1m[36m (109.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 16:47:10 +0800
+Processing by ProductsController#index as */*
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 16:47:10 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 16:47:10 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 16:47:10 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 16:47:10 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 16:47:10 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 16:47:10 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 16:47:11 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (359.4ms)[0m  DELETE FROM "products"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (62.5ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Aug 2012 08:48:22 UTC +00:00], ["description", "<p>\n        <em>Web Design for Developers</em> will show you how to make your\n        web-based application look professionally designed. We'll help you\n        learn how to pick the right colors and fonts, avoid costly interface\n        and accessibility mistakes -- your application will really come alive.\n        We'll also walk you through some common Photoshop and CSS techniques\n        and work through a web site redesign, taking a new design from concept\n        all the way to implementation.\n      </p>"], ["image_url", "/images/wd4d.jpg"], ["price", #<BigDecimal:24e36d0,'0.4295E2',18(45)>], ["title", "Web Design for Developers"], ["updated_at", Tue, 07 Aug 2012 08:48:22 UTC +00:00]]
+  [1m[36m (437.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 07 Aug 2012 08:48:23 UTC +00:00], ["description", "<p>\n        Ruby is the fastest growing and most exciting dynamic language\n        out there. If you need to get working programs delivered fast,\n        you should add Ruby to your toolbox.\n      </p>"], ["image_url", "/images/ruby.jpg"], ["price", #<BigDecimal:250f680,'0.495E2',18(45)>], ["title", "Programming Ruby 1.9"], ["updated_at", Tue, 07 Aug 2012 08:48:23 UTC +00:00]]
+  [1m[35m (718.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Aug 2012 08:48:24 UTC +00:00], ["description", "<p>\n        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing\n        Rails applications, covering Test-Driven Development from both a\n        theoretical perspective (why to test) and from a practical perspective\n        (how to test effectively). It covers the core Rails testing tools and\n        procedures for Rails 2 and Rails 3, and introduces popular add-ons,\n        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.\n      </p>"], ["image_url", "/images/rtp.jpg"], ["price", #<BigDecimal:2525700,'0.4375E2',18(45)>], ["title", "Rails Test Prescriptions"], ["updated_at", Tue, 07 Aug 2012 08:48:24 UTC +00:00]]
+  [1m[36m (593.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 16:48:27 +0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 78ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 16:48:27 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 16:48:27 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 16:48:27 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 16:48:27 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 16:48:27 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 16:48:27 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 16:48:27 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:04:12 +0800
+Processing by ProductsController#index as */*
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+ERROR: compiling _app_views_products_index_html_erb__1052510542_19509888 RAISED C:/MannulProject/depot/app/views/products/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+C:/MannulProject/depot/app/views/products/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+C:/MannulProject/depot/app/views/products/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_products_index_html_erb__1052510542_19509888(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "products/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div id="product_list">
+<h1>Listing products</h1>
+
+<table>
+'); @products.each do |product| 
+@output_buffer.safe_concat('  <tr class="');@output_buffer.append= (cycle('list_line_odd', 'list_line_even');@output_buffer.safe_concat('">
+    <td>');@output_buffer.append= ( image_tag(product.image_url, :class=>'list_image') );@output_buffer.safe_concat('</td>
+    <td class="list_description">
+		<dl>
+			<dt>');@output_buffer.append= ( product.title );@output_buffer.safe_concat('</dt>
+			<dd>');@output_buffer.append= ( truncate(strip_tags(product.description),:length=>80 );@output_buffer.safe_concat('</dd>
+	</td>
+	<td class="list_actions">
+	');@output_buffer.append= ( link_to 'Show', product );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( link_to 'Edit', edit_product_path(product) );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete );@output_buffer.safe_concat('</td>
+  </tr>
+'); end 
+@output_buffer.safe_concat('</table>
+</div>
+<br />
+
+');@output_buffer.append= ( link_to 'New Product', new_product_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `module_eval'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `compile'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:233:in `compile!'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:142:in `block in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:125:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:141:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:41:in `block (2 levels) in render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `block in instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:40:in `block in render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:48:in `render_with_layout'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:17:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:109:in `_render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:88:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:16:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+C:/MannulProject/depot/app/controllers/products_controller.rb:7:in `index'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:167:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:414:in `_run__1042622498__process_action__387764299__callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `block in instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:121:in `process'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:45:in `process'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:203:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:246:in `block in action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:30:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:589:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/flash.rb:242:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/query_cache.rb:64:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `_run__304667364__call__1019646175__callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:26:in `call_app'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:16:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/engine.rb:479:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:220:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/log_tailer.rb:14:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered products/index.html.erb within layouts/application (78.1ms)
+Completed 500 Internal Server Error in 94ms
+
+ActionView::Template::Error (C:/MannulProject/depot/app/views/products/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+C:/MannulProject/depot/app/views/products/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+C:/MannulProject/depot/app/views/products/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'):
+    15:     <%= link_to 'Edit', edit_product_path(product) %><br />
+    16:     <%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>
+    17:   </tr>
+    18: <% end %>
+    19: </table>
+    20: </div>
+    21: <br />
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:05:20 +0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+ERROR: compiling _app_views_products_index_html_erb__1052510542_19408980 RAISED C:/MannulProject/depot/app/views/products/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+C:/MannulProject/depot/app/views/products/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+C:/MannulProject/depot/app/views/products/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_products_index_html_erb__1052510542_19408980(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "products/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div id="product_list">
+<h1>Listing products</h1>
+
+<table>
+'); @products.each do |product| 
+@output_buffer.safe_concat('  <tr class="');@output_buffer.append= (cycle('list_line_odd', 'list_line_even'));@output_buffer.safe_concat('">
+    <td>');@output_buffer.append= ( image_tag(product.image_url, :class=>'list_image') );@output_buffer.safe_concat('</td>
+    <td class="list_description">
+		<dl>
+			<dt>');@output_buffer.append= ( product.title );@output_buffer.safe_concat('</dt>
+			<dd>');@output_buffer.append= ( truncate(strip_tags(product.description),:length=>80 );@output_buffer.safe_concat('</dd>
+	</td>
+	<td class="list_actions">
+	');@output_buffer.append= ( link_to 'Show', product );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( link_to 'Edit', edit_product_path(product) );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete );@output_buffer.safe_concat('</td>
+  </tr>
+'); end 
+@output_buffer.safe_concat('</table>
+</div>
+<br />
+
+');@output_buffer.append= ( link_to 'New Product', new_product_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `module_eval'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:285:in `compile'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:233:in `compile!'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:142:in `block in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:125:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/template.rb:141:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:41:in `block (2 levels) in render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `block in instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:40:in `block in render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:48:in `render_with_layout'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/template_renderer.rb:12:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_view/renderer/renderer.rb:17:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:109:in `_render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:88:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:16:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+C:/MannulProject/depot/app/controllers/products_controller.rb:7:in `index'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:167:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:414:in `_run__1042622498__process_action__387764299__callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `block in instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/notifications.rb:123:in `instrument'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/base.rb:121:in `process'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/abstract_controller/rendering.rb:45:in `process'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:203:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_controller/metal.rb:246:in `block in action'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:66:in `dispatch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:30:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/routing/route_set.rb:589:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/flash.rb:242:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/query_cache.rb:64:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `_run__304667364__call__1019646175__callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:26:in `call_app'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/logger.rb:16:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-3.2.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/engine.rb:479:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/application.rb:220:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-3.2.1/lib/rails/rack/log_tailer.rb:14:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (C:/MannulProject/depot/app/views/products/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+C:/MannulProject/depot/app/views/products/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+C:/MannulProject/depot/app/views/products/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'):
+    15:     <%= link_to 'Edit', edit_product_path(product) %><br />
+    16:     <%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>
+    17:   </tr>
+    18: <% end %>
+    19: </table>
+    20: </div>
+    21: <br />
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:06:01 +0800
+Processing by ProductsController#index as */*
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (312.5ms)
+Completed 200 OK in 312ms (Views: 312.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 17:06:02 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 17:06:02 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 17:06:02 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 17:06:02 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 17:06:02 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 17:06:02 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 17:06:02 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/wd4d.jpg" for 127.0.0.1 at 2012-08-07 17:06:02 +0800
+
+ActionController::RoutingError (No route matches [GET] "/images/wd4d.jpg"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/images/rtp.jpg" for 127.0.0.1 at 2012-08-07 17:06:02 +0800
+
+ActionController::RoutingError (No route matches [GET] "/images/rtp.jpg"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:06:52 +0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 17:06:52 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 17:06:52 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 17:06:52 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 17:06:52 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 17:06:52 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 17:06:52 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 17:06:52 +0800
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:07:36 +0800
+Processing by ProductsController#index as */*
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 62ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2012-08-07 17:07:36 +0800
+Served asset /all.css - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 17:07:36 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 17:07:36 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 17:07:36 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 17:07:36 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:08:02 +0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 62ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2012-08-07 17:08:02 +0800
+Served asset /all.css - 404 Not Found (15ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-08-07 17:08:02 +0800
+Served asset /defaults.js - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:08:37 +0800
+Processing by ProductsController#index as */*
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2012-08-07 17:08:37 +0800
+Served asset /all.css - 404 Not Found (15ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-08-07 17:08:37 +0800
+Served asset /defaults.js - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:09:26 +0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 62ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2012-08-07 17:09:26 +0800
+Served asset /all.css - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-08-07 17:09:26 +0800
+Served asset /defaults.js - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:09:52 +0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2012-08-07 17:09:52 +0800
+Served asset /all.css - 404 Not Found (15ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-08-07 17:09:52 +0800
+Served asset /defaults.js - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2012-08-07 17:10:13 +0800
+Served asset /all.css - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-08-07 17:10:16 +0800
+Served asset /defaults.js - 404 Not Found (15ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:10:34 +0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 17:10:35 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 17:10:35 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 17:10:35 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 17:10:35 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 17:10:35 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 17:10:35 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 17:10:35 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:13:12 +0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 17:13:12 +0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2012-08-07 17:13:12 +0800
+Served asset /all.css - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 17:13:12 +0800
+Served asset /products.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 17:13:12 +0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 17:13:12 +0800
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:13:15 +0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 62ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2012-08-07 17:13:15 +0800
+Served asset /all.css - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 17:13:15 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 17:13:15 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 17:13:15 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 17:13:15 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:15:03 +0800
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 17:15:03 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 17:15:03 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 17:15:03 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 17:15:03 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css" for 127.0.0.1 at 2012-08-07 17:15:03 +0800
+Served asset /depot.css - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/depot.css"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-07 17:16:43 +0800
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:17:29 +0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Compiled depot.css  (0ms)  (pid 5540)
+Compiled application.css  (78ms)  (pid 5540)
+Completed 200 OK in 219ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 17:17:30 +0800
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2012-08-07 17:17:30 +0800
+Served asset /depot.css - 200 OK (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 17:17:30 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 17:17:30 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 17:17:30 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 17:17:30 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 17:17:30 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 17:17:30 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateProducts (20120807081235)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "products"[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20120807081235'
+  [1m[36m (62.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:20:07 +0800
+Processing by ProductsController#index as */*
+Completed 500 Internal Server Error in 0ms
+
+ActiveRecord::StatementInvalid (Could not find table 'products'):
+  app/controllers/products_controller.rb:5:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20120807081235)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120807081235')[0m
+  [1m[35m (421.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("products")[0m
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:20:54 +0800
+Processing by ProductsController#index as */*
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 62ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 17:20:55 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2012-08-07 17:20:55 +0800
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 17:20:55 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 17:20:55 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 17:20:55 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 17:20:55 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 17:20:55 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 17:20:55 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (218.8ms)[0m  DELETE FROM "products"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (46.9ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Aug 2012 09:21:15 UTC +00:00], ["description", "<p>\n        <em>Web Design for Developers</em> will show you how to make your\n        web-based application look professionally designed. We'll help you\n        learn how to pick the right colors and fonts, avoid costly interface\n        and accessibility mistakes -- your application will really come alive.\n        We'll also walk you through some common Photoshop and CSS techniques\n        and work through a web site redesign, taking a new design from concept\n        all the way to implementation.\n      </p>"], ["image_url", "/images/wd4d.jpg"], ["price", #<BigDecimal:24e09d0,'0.4295E2',18(45)>], ["title", "Web Design for Developers"], ["updated_at", Tue, 07 Aug 2012 09:21:15 UTC +00:00]]
+  [1m[36m (78.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 07 Aug 2012 09:21:15 UTC +00:00], ["description", "<p>\n        Ruby is the fastest growing and most exciting dynamic language\n        out there. If you need to get working programs delivered fast,\n        you should add Ruby to your toolbox.\n      </p>"], ["image_url", "/images/ruby.jpg"], ["price", #<BigDecimal:2514930,'0.495E2',18(45)>], ["title", "Programming Ruby 1.9"], ["updated_at", Tue, 07 Aug 2012 09:21:15 UTC +00:00]]
+  [1m[35m (78.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "price", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Aug 2012 09:21:16 UTC +00:00], ["description", "<p>\n        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing\n        Rails applications, covering Test-Driven Development from both a\n        theoretical perspective (why to test) and from a practical perspective\n        (how to test effectively). It covers the core Rails testing tools and\n        procedures for Rails 2 and Rails 3, and introduces popular add-ons,\n        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.\n      </p>"], ["image_url", "/images/rtp.jpg"], ["price", #<BigDecimal:2517d98,'0.4375E2',18(45)>], ["title", "Rails Test Prescriptions"], ["updated_at", Tue, 07 Aug 2012 09:21:16 UTC +00:00]]
+  [1m[36m (78.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 17:21:22 +0800
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 17:21:22 +0800
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2012-08-07 17:21:22 +0800
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 17:21:22 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 17:21:22 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 17:21:22 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 17:21:22 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 17:21:22 +0800
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 17:21:22 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-08-07 18:12:28 +0800
+Processing by ProductsController#index as */*
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (250.0ms)
+Completed 200 OK in 3156ms (Views: 2828.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 18:12:39 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2012-08-07 18:12:39 +0800
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 18:12:39 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 18:12:39 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 18:12:39 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 18:12:39 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 18:12:39 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 18:12:39 +0800
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2012-08-07 18:12:41 +0800
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (0.0ms)
+  Rendered products/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 62ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2012-08-07 18:12:43 +0800
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yZKxu15Cuns2TG0J5n0zjLn9ni564GqwiqMKyw5yd0=", "product"=>{"title"=>"", "description"=>"", "image_url"=>"", "price"=>""}, "commit"=>"Create Product"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered products/_form.html.erb (15.6ms)
+  Rendered products/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 47ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2012-08-07 18:14:25 +0800
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yZKxu15Cuns2TG0J5n0zjLn9ni564GqwiqMKyw5yd0=", "product"=>{"title"=>"", "description"=>"", "image_url"=>"", "price"=>""}, "commit"=>"Create Product"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered products/_form.html.erb (15.6ms)
+  Rendered products/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 31ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-07 18:14:26 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-08-07 18:14:26 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/depot.css?body=1" for 127.0.0.1 at 2012-08-07 18:14:26 +0800
+Served asset /depot.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-07 18:14:26 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-07 18:14:26 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-07 18:14:26 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-08-07 18:14:26 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-07 18:14:26 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2012-08-07 18:14:31 +0800
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yZKxu15Cuns2TG0J5n0zjLn9ni564GqwiqMKyw5yd0=", "product"=>{"title"=>"a", "description"=>"b", "image_url"=>"c", "price"=>"d"}, "commit"=>"Create Product"}
+  [1m[36m (15.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered products/_form.html.erb (15.6ms)
+  Rendered products/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 94ms (Views: 31.2ms | ActiveRecord: 15.6ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (78.1ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (78.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (109.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (78.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (78.1ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (93.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (78.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (109.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (93.8ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (62.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (93.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (62.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (46.9ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (78.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (93.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (78.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-29 00:35:02 +0800
+Served asset /rails.png - 200 OK (62ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-08-29 12:46:54 +0800
+Served asset /rails.png - 200 OK (15ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (109.4ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (93.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (93.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (93.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (93.8ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (93.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (78.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (109.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (125.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (109.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (93.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (109.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (93.8ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (62.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (78.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (93.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (93.8ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (78.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (78.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (93.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (78.1ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (78.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (109.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (93.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (78.1ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (78.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (62.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (109.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (93.8ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (93.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (93.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (78.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (109.4ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (156.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (109.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (78.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (15.6ms)[0m  select sqlite_version(*)
+  [1m[36m (78.1ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (93.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (78.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (78.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (78.1ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (78.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (62.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (93.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (78.1ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (78.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (109.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (78.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (109.4ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (78.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (93.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (78.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (93.8ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (93.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (109.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (93.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120807081235')
